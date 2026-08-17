@@ -479,7 +479,7 @@
   <a href="#projects" data-en="Projects" data-ar="مشاريعنا">Projects</a>
   <a href="#process" data-en="Process" data-ar="آلية العمل">Process</a>
   <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
-  <a class="btn btn-primary" href="tel:+96895418430" style="margin-top:10px;" data-en="Call Us" data-ar="اتصل بنا">Call Us</a>
+  <button class="lang-toggle" id="langToggleMobile" style="align-self:flex-start; margin-top:6px;">EN / عربي</button>  <a class="btn btn-primary" href="tel:+96895418430" style="margin-top:10px;" data-en="Call Us" data-ar="اتصل بنا">Call Us</a>
 </div>
 
 <header id="siteHeader">
@@ -1053,7 +1053,8 @@
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
 
   // Lang toggle — switches all data-en/data-ar elements + document direction
-  const langToggle = document.getElementById('langToggle');
+  const langToggle = document.getElementById('langToggle');const langToggleMobile = document.getElementById('langToggleMobile');
+  
   const translatable = document.querySelectorAll('[data-en][data-ar]');
 
   function applyLang(lang){
@@ -1064,7 +1065,8 @@
       const content = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
       el.innerHTML = content;
     });
-    langToggle.textContent = lang === 'ar' ? 'العربية / EN' : 'EN / عربي';
+    langToggle.textContent = lang === 'ar' ? 'العربية / EN' : 'EN / عربي';if (langToggleMobile) langToggleMobile.textContent = langToggle.textContent;
+    
     const yearEl = document.getElementById('year') || document.getElementById('year2');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
     window.__siteLang = lang;
@@ -1073,7 +1075,8 @@
   langToggle.addEventListener('click', () => {
     const current = window.__siteLang || 'en';
     applyLang(current === 'en' ? 'ar' : 'en');
-  });
+  });if (langToggleMobile) { langToggleMobile.addEventListener('click', () => { const current = window.__siteLang || 'en'; applyLang(current === 'en' ? 'ar' : 'en'); }); }
+  
 
   // Reveal on scroll
   const revealEls = document.querySelectorAll('.reveal');
