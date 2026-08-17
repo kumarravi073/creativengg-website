@@ -954,15 +954,18 @@
             <div><div class="lbl" data-en="Company / C.R. No." data-ar="الشركة / رقم السجل التجاري">Company / C.R. No.</div><div class="val">Creative Engineering &amp; Contracting Co. LLC — C.R. No. 1498561</div></div>
           </div>
         </div>
-        <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('.form-success').style.display='block'; this.reset();">
+        <form class="contact-form reveal" id="contactForm">
+          <input type="hidden" name="access_key" value="7cd5ed47-dab1-4d7f-a6e0-7af2ebf6bf98" />
+          <input type="hidden" name="subject" value="New Contact Form Submission — creativengg.com" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="two-col">
-            <div><label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label><input type="text" placeholder="Your name" required /></div>
-            <div><label data-en="Phone" data-ar="الهاتف">Phone</label><input type="tel" placeholder="+968 ..." required /></div>
+            <div><label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label><input type="text" name="name" placeholder="Your name" required /></div>
+            <div><label data-en="Phone" data-ar="الهاتف">Phone</label><input type="tel" name="phone" placeholder="+968 ..." required /></div>
           </div>
           <div class="two-col">
-            <div><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><input type="email" placeholder="you@company.com" required /></div>
+            <div><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><input type="email" name="email" placeholder="you@company.com" required /></div>
             <div><label data-en="Service Needed" data-ar="الخدمة المطلوبة">Service Needed</label>
-              <select>
+              <select name="service">
                 <option data-en="Steel Fabrication" data-ar="تصنيع الحديد">Steel Fabrication</option>
                 <option data-en="Structural Works" data-ar="الأعمال الإنشائية">Structural Works</option>
                 <option data-en="Welding" data-ar="اللحام">Welding</option>
@@ -972,10 +975,10 @@
               </select>
             </div>
           </div>
-          <div><label data-en="Project Details" data-ar="تفاصيل المشروع">Project Details</label><textarea placeholder="Tell us a bit about your project..."></textarea></div>
+          <div><label data-en="Project Details" data-ar="تفاصيل المشروع">Project Details</label><textarea name="message" placeholder="Tell us a bit about your project..."></textarea></div>
           <button type="submit" class="btn btn-primary" style="justify-self:start;" data-en="Send Message →" data-ar="إرسال الرسالة ←">Send Message →</button>
-          <p class="form-note form-success" style="display:none; color:var(--amber-400);">Thanks — this is a front-end demo form. Connect it to email/CRM before going live.</p>
-          <p class="form-note">This form is not yet wired to a backend — connect it to an email service (e.g. Formspree) or your CRM before launch.</p>
+          <p class="form-note form-success" style="display:none; color:var(--amber-400);" data-en="Thanks — your message has been sent. We'll be in touch soon." data-ar="شكرًا — تم إرسال رسالتك. سنتواصل معك قريبًا.">Thanks — your message has been sent. We'll be in touch soon.</p>
+          <p class="form-note form-error" style="display:none; color:#ff8a8a;" data-en="Something went wrong — please try again or call us directly." data-ar="حدث خطأ ما — يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.">Something went wrong — please try again or call us directly.</p>
         </form>
       </div>
     </div>
@@ -1184,6 +1187,42 @@
     if (e.key === 'ArrowLeft'){ lbIndex--; showLightbox(); }
     if (e.key === 'ArrowRight'){ lbIndex++; showLightbox(); }
   });
+
+  /* ---------- CONTACT FORM (Web3Forms) ---------- */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm){
+    const successMsg = contactForm.querySelector('.form-success');
+    const errorMsg = contactForm.querySelector('.form-error');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    contactForm.addEventListener('submit', async function(e){
+      e.preventDefault();
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      try{
+        const formData = new FormData(contactForm);
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+        const result = await res.json();
+        if (result.success){
+          successMsg.style.display = 'block';
+          contactForm.reset();
+        } else {
+          errorMsg.style.display = 'block';
+        }
+      } catch(err){
+        errorMsg.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  }
 </script>
 
 </body>
