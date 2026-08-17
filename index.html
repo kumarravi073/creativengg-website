@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Creative Engineering &amp; Contracting Co. LLC | Muscat, Oman</title>
+<link rel="icon" type="image/png" href="images/logo.png" />
+<meta name="description" content="Trusted engineering, structural steel, welding and industrial fabrication solutions for commercial clients across Oman. 25+ years based in Muscat." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#070c13;
+    --navy-900:#0b1420;
+    --navy-800:#111e2e;
+    --navy-700:#182a3f;
+    --steel-600:#3d5568;
+    --steel-400:#7690a3;
+    --fog-200:#c7d3dc;
+    --fog-100:#e7edf1;
+    --white:#f7f9fb;
+    --amber-500:#f5a623;
+    --amber-400:#ffc25c;
+    --cyan-400:#3ee6d0;
+    --shadow-lg: 0 30px 60px -20px rgba(3,8,15,0.55);
+    --shadow-sm: 0 10px 24px -12px rgba(3,8,15,0.4);
+    --radius: 14px;
+    --maxw: 1240px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--navy-950);
+    color:var(--fog-100);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    line-height:1.15;
+    color:var(--white);
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:13px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--amber-400); font-weight:600; margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:28px; height:2px; background:var(--amber-400); display:inline-block;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 30px; border-radius:999px; font-weight:600; font-size:15px;
+    font-family:'Space Grotesk', sans-serif;
+    cursor:pointer; border:1px solid transparent; transition:all .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{ background:var(--amber-500); color:var(--navy-950); }
+  .btn-primary:hover{ background:var(--amber-400); transform:translateY(-2px); box-shadow:var(--shadow-sm);}
+  .btn-ghost{ background:transparent; border:1px solid rgba(247,249,251,0.28); color:var(--white); }
+  .btn-ghost:hover{ border-color:var(--amber-400); color:var(--amber-400); transform:translateY(-2px);}
+  .btn-block{ background:var(--navy-950); color:var(--white); border:1px solid rgba(247,249,251,0.15);}
+  .btn-block:hover{ border-color:var(--amber-400); color:var(--amber-400);}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:14px 0;
+    background:rgba(255,255,255,0.98);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    box-shadow:0 8px 24px -14px rgba(20,30,45,0.18);
+    border-bottom:1px solid rgba(20,30,45,0.08);
+    transition:padding .3s ease, box-shadow .3s ease;
+  }
+  header.scrolled{
+    padding:9px 0;
+    box-shadow:0 8px 30px -12px rgba(20,30,45,0.25);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; gap:24px;}
+  .brand{ display:flex; align-items:center; gap:14px; }
+  .brand-mark{
+    width:58px; height:58px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .brand-mark img{ width:100%; height:100%; object-fit:contain; }
+  .brand-text{ line-height:1.18; }
+  .brand-text .name{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:var(--white); letter-spacing:0; max-width:250px; display:block;}
+  .brand-text .sub{ font-size:11px; letter-spacing:0.05em; text-transform:uppercase; color:var(--steel-400); margin-top:3px;}
+  header .brand-text .name{ color:var(--navy-950); }
+  header .brand-text .sub{ color:var(--steel-600); }
+  header nav.main-nav a{ color:var(--navy-800); }
+  header nav.main-nav a:hover{ color:var(--amber-500); }
+  header .lang-toggle{ color:var(--steel-600); border-color:rgba(20,30,45,0.15); }
+  header .lang-toggle:hover{ color:var(--amber-500); border-color:var(--amber-500); }
+  header .menu-toggle span{ background:var(--navy-950); }
+  nav.main-nav{ display:flex; align-items:center; gap:34px; }
+  nav.main-nav a{
+    font-size:14.5px; font-weight:500; color:var(--fog-200);
+    position:relative; padding:4px 0; transition:color .2s ease;
+  }
+  nav.main-nav a::after{
+    content:""; position:absolute; left:0; bottom:-2px; width:0; height:1.5px;
+    background:var(--amber-400); transition:width .25s ease;
+  }
+  nav.main-nav a:hover{ color:var(--white); }
+  nav.main-nav a:hover::after{ width:100%; }
+  .nav-right{ display:flex; align-items:center; gap:16px; }
+  .lang-toggle{
+    font-size:13px; font-weight:600; color:var(--steel-400); border:1px solid rgba(255,255,255,0.15);
+    border-radius:999px; padding:6px 14px; cursor:pointer; transition:all .2s ease;
+  }
+  .lang-toggle:hover{ color:var(--amber-400); border-color:var(--amber-400); }
+  .menu-toggle{
+    display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;
+  }
+  .menu-toggle span{ width:24px; height:2px; background:var(--white); display:block; transition:all .25s ease;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; min-height:100vh; display:flex; align-items:center;
+    padding-top:110px; padding-bottom:80px;
+  }
+  .hero-bg{
+    position:absolute; inset:0; z-index:-2;
+    background:
+      linear-gradient(180deg, rgba(7,12,19,0.55) 0%, rgba(7,12,19,0.78) 55%, var(--navy-950) 100%),
+      url('images/hero-villa-shade.jpg') center/cover no-repeat;
+  }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background-image:linear-gradient(rgba(247,249,251,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(247,249,251,0.035) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:linear-gradient(180deg, black, transparent 85%);
+  }
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14);
+    padding:8px 16px 8px 8px; border-radius:999px; margin-bottom:28px;
+    backdrop-filter:blur(6px);
+  }
+  .hero-badge .dot{ width:26px; height:26px; border-radius:50%; background:var(--amber-500); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:var(--navy-950); font-family:'Space Grotesk',sans-serif;}
+  .hero-badge span.txt{ font-size:13px; color:var(--fog-200); font-weight:500; }
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 5rem); max-width:900px; margin-bottom:24px;
+  }
+  .hero h1 em{ font-style:normal; color:var(--amber-400); }
+  .hero p.lead{
+    font-size:19px; color:var(--fog-200); max-width:560px; margin-bottom:38px; font-weight:300;
+  }
+  .hero-cta{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px;}
+  .hero-stats{
+    display:flex; gap:0; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,0.12); padding-top:28px; max-width:640px;
+  }
+  .hero-stats .stat{ padding-right:40px; margin-right:40px; border-right:1px solid rgba(255,255,255,0.12);}
+  .hero-stats .stat:last-child{ border-right:none; margin-right:0; padding-right:0;}
+  .hero-stats .stat .num{ font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:700; color:var(--white);}
+  .hero-stats .stat .lbl{ font-size:12.5px; color:var(--steel-400); text-transform:uppercase; letter-spacing:0.06em; margin-top:2px;}
+  .scroll-cue{
+    position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--steel-400); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+    animation:bob 2.4s infinite ease-in-out;
+  }
+  @keyframes bob{ 0%,100%{transform:translate(-50%,0);} 50%{transform:translate(-50%,8px);} }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{ position:relative; padding:120px 0; }
+  .section-alt{ background:var(--navy-900); }
+  .section-head{ max-width:640px; margin-bottom:60px; }
+  .section-head p{ color:var(--steel-400); font-size:17px; font-weight:300; }
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; align-items:center; }
+  .about-quote{
+    font-family:'Space Grotesk',sans-serif; font-size:24px; color:var(--white); font-weight:500;
+    border-left:2px solid var(--amber-500); padding-left:24px; margin:30px 0; line-height:1.5;
+  }
+  .about-list{ display:grid; gap:16px; margin-top:30px; }
+  .about-list li{ display:flex; gap:14px; align-items:flex-start; color:var(--fog-200); font-size:15.5px; list-style:none;}
+  .about-list li .check{
+    width:22px; height:22px; border-radius:50%; background:rgba(245,166,35,0.14); color:var(--amber-400);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:12px; margin-top:2px;
+  }
+  .about-media{ position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg); }
+  .about-media img{ width:100%; height:520px; object-fit:cover; }
+  .about-media .tag{
+    position:absolute; bottom:20px; left:20px; background:rgba(7,12,19,0.75); backdrop-filter:blur(8px);
+    padding:14px 18px; border-radius:10px; border:1px solid rgba(255,255,255,0.12);
+  }
+  .about-media .tag .n{ font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700; color:var(--amber-400);}
+  .about-media .tag .l{ font-size:12px; color:var(--fog-200); text-transform:uppercase; letter-spacing:0.05em;}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .service-card{
+    background:var(--navy-800); border:1px solid rgba(255,255,255,0.07); border-radius:var(--radius);
+    padding:34px 28px; transition:transform .3s ease, border-color .3s ease, background .3s ease;
+    position:relative; overflow:hidden;
+  }
+  .service-card:hover{ transform:translateY(-6px); border-color:rgba(245,166,35,0.4); background:var(--navy-700); }
+  .service-card .idx{ font-family:'Space Grotesk',sans-serif; font-size:13px; color:var(--steel-400); font-weight:600; letter-spacing:0.05em; }
+  .service-card .icon{
+    width:52px; height:52px; border-radius:12px; background:rgba(245,166,35,0.12);
+    display:flex; align-items:center; justify-content:center; margin:18px 0 22px; color:var(--amber-400);
+  }
+  .service-card h3{ font-size:19px; margin-bottom:10px; }
+  .service-card p{ font-size:14.5px; color:var(--fog-200); font-weight:300; }
+  .services-grid .service-card:nth-child(4),
+  .services-grid .service-card:nth-child(5){ grid-column: span 1; }
+
+  /* ---------- PHILOSOPHY ---------- */
+  .philosophy{
+    background:linear-gradient(135deg, var(--navy-800), var(--navy-900));
+    border-radius:24px; padding:80px 60px; position:relative; overflow:hidden;
+  }
+  .philosophy::before{
+    content:""; position:absolute; top:-100px; right:-100px; width:340px; height:340px; border-radius:50%;
+    background:radial-gradient(circle, rgba(245,166,35,0.18), transparent 70%);
+  }
+  .philosophy-top{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px; }
+  .philosophy-top span{
+    font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.04em;
+    padding:9px 18px; border:1px solid rgba(255,255,255,0.18); border-radius:999px; color:var(--fog-200);
+  }
+  .philosophy-top span:nth-child(2){ color:var(--amber-400); border-color:rgba(245,166,35,0.4); }
+  .philosophy h2{ font-size:clamp(1.7rem,3vw,2.5rem); max-width:820px; font-weight:500; position:relative; z-index:1; }
+
+  /* ---------- STATS / HIGHLIGHTS ---------- */
+  .stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,0.08); border-radius:var(--radius); overflow:hidden; }
+  .stats-grid .cell{ background:var(--navy-950); padding:44px 30px; text-align:center; }
+  .stats-grid .cell .big{ font-family:'Space Grotesk',sans-serif; font-size:44px; font-weight:700; color:var(--amber-400); }
+  .stats-grid .cell .cap{ margin-top:8px; font-size:13.5px; color:var(--fog-200); letter-spacing:0.02em; }
+
+  /* ---------- PROJECTS ---------- */
+  .proj-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:50px;}
+  .proj-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .proj-card{ position:relative; border-radius:var(--radius); overflow:hidden; height:340px; }
+  .proj-card:first-child{ grid-column:span 2; grid-row:span 2; height:100%; }
+  .proj-card img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .proj-card:hover img{ transform:scale(1.07); }
+  .proj-card .overlay{
+    position:absolute; inset:0; background:linear-gradient(180deg, transparent 40%, rgba(7,12,19,0.92) 100%);
+    display:flex; align-items:flex-end; padding:24px;
+  }
+  .proj-card .overlay .cat{ font-size:11.5px; color:var(--amber-400); text-transform:uppercase; letter-spacing:0.08em; font-weight:600; margin-bottom:6px; display:block; }
+  .proj-card .overlay h4{ font-size:18px; color:var(--white); }
+
+  /* ---------- GALLERY (full photo set) ---------- */
+  .gal-tabs{ display:flex; flex-wrap:wrap; gap:10px; margin:36px 0 34px; }
+  .gal-tab{
+    font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:600; letter-spacing:0.01em;
+    padding:10px 18px; border-radius:999px; border:1px solid rgba(255,255,255,0.15); background:transparent;
+    color:var(--fog-200); cursor:pointer; transition:all .2s ease;
+  }
+  .gal-tab:hover{ border-color:rgba(245,166,35,0.5); color:var(--amber-400); }
+  .gal-tab.active{ background:var(--amber-500); border-color:var(--amber-500); color:var(--navy-950); }
+  .gal-grid{
+    column-count:4; column-gap:16px;
+  }
+  .gal-item{
+    break-inside:avoid; margin:0 0 16px; position:relative; border-radius:12px; overflow:hidden;
+    border:1px solid rgba(255,255,255,0.07); cursor:pointer; background:var(--navy-800);
+    display:block; transition:opacity .35s ease, transform .35s ease;
+  }
+  .gal-item.hide{ display:none; }
+  .gal-item img{ width:100%; display:block; transition:transform .5s ease; }
+  .gal-item:hover img{ transform:scale(1.05); }
+  .gal-item figcaption{
+    position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:16px;
+    background:linear-gradient(180deg, transparent 55%, rgba(7,12,19,0.92) 100%);
+    opacity:0; transition:opacity .25s ease;
+  }
+  .gal-item:hover figcaption{ opacity:1; }
+  .gal-item .gcat{ font-size:10.5px; color:var(--amber-400); text-transform:uppercase; letter-spacing:0.07em; font-weight:600; margin-bottom:4px; }
+  .gal-item .gtitle{ font-size:14px; color:var(--white); font-weight:500; font-family:'Space Grotesk',sans-serif; }
+  @media (max-width:980px){ .gal-grid{ column-count:3; } }
+  @media (max-width:720px){ .gal-grid{ column-count:2; column-gap:10px; } .gal-item{ margin-bottom:10px; border-radius:9px; } .gal-item figcaption{ opacity:1; padding:10px; background:linear-gradient(180deg, transparent 45%, rgba(7,12,19,0.9) 100%);} .gal-item .gtitle{ font-size:12px; } .gal-tabs{ gap:8px; } .gal-tab{ padding:8px 14px; font-size:12.5px; } }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    position:fixed; inset:0; z-index:500; background:rgba(3,6,10,0.96);
+    display:none; align-items:center; justify-content:center; flex-direction:column; padding:40px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width:min(90vw, 1100px); max-height:74vh; border-radius:10px; box-shadow:var(--shadow-lg); object-fit:contain; }
+  .lb-caption{ margin-top:18px; text-align:center; color:var(--fog-100); font-family:'Space Grotesk',sans-serif; font-size:16px; }
+  .lb-close{
+    position:absolute; top:24px; right:28px; background:none; border:none; color:var(--fog-100); font-size:22px;
+    cursor:pointer; width:44px; height:44px; border-radius:50%; transition:background .2s ease;
+  }
+  .lb-close:hover{ background:rgba(255,255,255,0.1); }
+  .lb-nav{
+    position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
+    color:var(--white); font-size:28px; width:52px; height:52px; border-radius:50%; cursor:pointer; transition:all .2s ease;
+  }
+  .lb-nav:hover{ background:var(--amber-500); color:var(--navy-950); border-color:var(--amber-500); }
+  .lb-prev{ left:24px; } .lb-next{ right:24px; }
+  @media (max-width:720px){ .lb-nav{ width:42px; height:42px; font-size:22px; } .lb-prev{ left:8px; } .lb-next{ right:8px; } .lb-close{ top:14px; right:14px; } }
+
+  /* ---------- PROCESS ---------- */
+  .process-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; position:relative; }
+  .process-grid::before{
+    content:""; position:absolute; top:34px; left:8%; right:8%; height:1px; background:repeating-linear-gradient(90deg, rgba(255,255,255,0.2) 0 8px, transparent 8px 16px); z-index:0;
+  }
+  .process-step{ position:relative; z-index:1; padding-right:40px; }
+  .process-step .num{
+    width:68px; height:68px; border-radius:50%; border:1.5px solid rgba(245,166,35,0.5); background:var(--navy-950);
+    display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700;
+    font-size:22px; color:var(--amber-400); margin-bottom:26px;
+  }
+  .process-step h3{ font-size:20px; margin-bottom:12px; }
+  .process-step p{ color:var(--fog-200); font-size:14.5px; font-weight:300; max-width:320px; }
+
+  /* ---------- ARABIC / RTL SUPPORT ---------- */
+  html[lang="ar"] body{ font-family:'Cairo', sans-serif; }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4{
+    font-family:'Cairo', sans-serif; font-weight:700; letter-spacing:0;
+  }
+  html[lang="ar"] .eyebrow{ letter-spacing:0.02em; }
+  html[lang="ar"] .eyebrow::before{ margin-left:10px; margin-right:0; }
+  html[dir="rtl"] .wrap{ direction:rtl; }
+  html[dir="rtl"] .nav-row{ flex-direction:row-reverse; }
+  html[dir="rtl"] .brand{ flex-direction:row-reverse; }
+  html[dir="rtl"] .main-nav{ flex-direction:row-reverse; }
+  html[dir="rtl"] .nav-right{ flex-direction:row-reverse; }
+  html[dir="rtl"] .about-grid{ direction:rtl; }
+  html[dir="rtl"] .about-list li{ flex-direction:row-reverse; text-align:right; }
+  html[dir="rtl"] .hero-cta, html[dir="rtl"] .cta-actions{ flex-direction:row-reverse; }
+  html[dir="rtl"] .hero-stats{ flex-direction:row-reverse; }
+  html[dir="rtl"] .stat, html[dir="rtl"] .cell{ text-align:right; }
+  html[dir="rtl"] .services-grid, html[dir="rtl"] .stats-grid, html[dir="rtl"] .process-grid, html[dir="rtl"] .client-row{ direction:rtl; }
+  html[dir="rtl"] .service-card, html[dir="rtl"] .process-step{ text-align:right; }
+  html[dir="rtl"] .philosophy-top{ flex-direction:row-reverse; }
+  html[dir="rtl"] .contact-grid{ direction:rtl; }
+  html[dir="rtl"] .contact-info-card .row{ flex-direction:row-reverse; text-align:right; }
+  html[dir="rtl"] label{ text-align:right; display:block; }
+  html[dir="rtl"] input, html[dir="rtl"] textarea, html[dir="rtl"] select{ text-align:right; }
+  html[dir="rtl"] .footer-grid{ direction:rtl; text-align:right; }
+  html[dir="rtl"] .footer-brand .brand{ flex-direction:row-reverse; justify-content:flex-end; }
+  html[dir="rtl"] .footer-bottom{ flex-direction:row-reverse; }
+  html[dir="rtl"] .gal-tabs{ direction:rtl; }
+  html[dir="rtl"] .lang-toggle{ order:-1; }
+
+  /* ---------- TRUST / CLIENTS ---------- */
+  .trust-strip{ text-align:center; }
+  .trust-strip .section-head{ margin:0 auto 46px; text-align:center; }
+  .client-row{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+  }
+  .client-slot{
+    background:var(--navy-800); border:1px solid rgba(255,255,255,0.08); border-radius:12px;
+    height:76px; display:flex; align-items:center; justify-content:center; color:var(--fog-200);
+    font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.01em;
+    text-align:center; padding:10px 14px; transition:all .25s ease;
+  }
+  .client-slot:hover{ border-color:var(--amber-400); color:var(--amber-400); background:var(--navy-700); transform:translateY(-2px); }
+  @media (max-width:900px){ .client-row{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:600px){ .client-row{ grid-template-columns:repeat(2,1fr); } }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:linear-gradient(135deg, var(--amber-500), var(--amber-400));
+    border-radius:28px; padding:80px 60px; display:flex; justify-content:space-between; align-items:center; gap:40px; flex-wrap:wrap;
+    color:var(--navy-950); position:relative; overflow:hidden;
+  }
+  .final-cta::after{
+    content:""; position:absolute; inset:0; opacity:0.08;
+    background-image:linear-gradient(#070c13 1px, transparent 1px), linear-gradient(90deg, #070c13 1px, transparent 1px);
+    background-size:36px 36px;
+  }
+  .final-cta h2{ color:var(--navy-950); font-size:clamp(1.8rem,3.4vw,2.7rem); max-width:520px; position:relative; }
+  .final-cta p{ color:rgba(7,12,19,0.75); margin-top:12px; font-size:16px; font-weight:500; position:relative; }
+  .final-cta .cta-actions{ position:relative; display:flex; gap:14px; flex-wrap:wrap; }
+  .final-cta .btn-primary{ background:var(--navy-950); color:var(--white); }
+  .final-cta .btn-primary:hover{ background:var(--navy-800); }
+  .final-cta .btn-ghost{ border-color:rgba(7,12,19,0.4); color:var(--navy-950); }
+  .final-cta .btn-ghost:hover{ border-color:var(--navy-950); background:rgba(7,12,19,0.08); }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; }
+  .contact-info-card{
+    background:var(--navy-800); border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius); padding:40px;
+  }
+  .contact-info-card .row{ display:flex; gap:16px; padding:18px 0; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .contact-info-card .row:last-child{ border-bottom:none; }
+  .contact-info-card .row .ic{
+    width:42px; height:42px; border-radius:10px; background:rgba(245,166,35,0.12); color:var(--amber-400);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .contact-info-card .row .lbl{ font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--steel-400); margin-bottom:4px;}
+  .contact-info-card .row .val{ font-size:15.5px; color:var(--white); font-weight:500;}
+  .contact-form{ display:grid; gap:18px; }
+  .contact-form .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .contact-form label{ display:block; font-size:13px; color:var(--steel-400); margin-bottom:8px; letter-spacing:0.02em; }
+  .contact-form input, .contact-form select, .contact-form textarea{
+    width:100%; background:var(--navy-800); border:1px solid rgba(255,255,255,0.1); color:var(--white);
+    padding:14px 16px; border-radius:10px; font-family:'Inter',sans-serif; font-size:14.5px; outline:none; transition:border-color .2s ease;
+  }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{ border-color:var(--amber-400); }
+  .contact-form textarea{ resize:vertical; min-height:120px; }
+  .form-note{ font-size:12.5px; color:var(--steel-400); }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background:var(--navy-950); border-top:1px solid rgba(255,255,255,0.08); padding:70px 0 30px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:50px; margin-bottom:60px; }
+  .footer-brand p{ color:var(--steel-400); font-size:14px; margin-top:16px; max-width:280px; font-weight:300; }
+  .footer-col h4{ font-size:14px; color:var(--white); margin-bottom:18px; text-transform:uppercase; letter-spacing:0.05em; }
+  .footer-col ul{ list-style:none; display:grid; gap:12px; }
+  .footer-col a{ color:var(--steel-400); font-size:14.5px; transition:color .2s ease; }
+  .footer-col a:hover{ color:var(--amber-400); }
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.08); padding-top:26px; display:flex; justify-content:space-between;
+    align-items:center; flex-wrap:wrap; gap:14px; color:var(--steel-400); font-size:13px;
+  }
+  .footer-bottom a{ color:var(--steel-400); }
+  .footer-bottom a:hover{ color:var(--amber-400); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 980px){
+    .about-grid, .contact-grid{ grid-template-columns:1fr; }
+    .about-media img{ height:360px; }
+    .services-grid{ grid-template-columns:repeat(2,1fr); }
+    .stats-grid{ grid-template-columns:repeat(2,1fr); }
+    .process-grid{ grid-template-columns:1fr; gap:40px; }
+    .process-grid::before{ display:none; }
+    .proj-grid{ grid-template-columns:repeat(2,1fr); }
+    .proj-card:first-child{ grid-column:span 2; height:340px; }
+    .client-row{ grid-template-columns:repeat(3,1fr); }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width: 720px){
+    nav.main-nav{ display:none; }
+    .menu-toggle{ display:flex; }
+    .nav-right{ gap:8px; }
+    .nav-right .lang-toggle{ display:none; }
+    .nav-right > a.btn-primary{ display:none; }
+    .hero-stats{ gap:0; }
+    .hero-stats .stat{ padding-right:24px; margin-right:24px; }
+    .services-grid{ grid-template-columns:1fr; }
+    .stats-grid{ grid-template-columns:repeat(2,1fr); }
+    .proj-grid{ grid-template-columns:1fr; }
+    .proj-card:first-child{ grid-column:span 1; }
+    .client-row{ grid-template-columns:repeat(2,1fr); }
+    .philosophy{ padding:50px 26px; }
+    .final-cta{ padding:50px 30px; flex-direction:column; align-items:flex-start; }
+    .footer-grid{ grid-template-columns:1fr; gap:36px; }
+    .contact-form .two-col{ grid-template-columns:1fr; }
+    section{ padding:80px 0; }
+  }
+
+  /* mobile nav drawer */
+  .mobile-drawer{
+    position:fixed; top:0; right:-100%; width:78%; max-width:320px; height:100vh; z-index:200;
+    background:var(--navy-900); border-left:1px solid rgba(255,255,255,0.08); padding:100px 30px 30px;
+    transition:right .35s ease; display:flex; flex-direction:column; gap:26px;
+  }
+  .mobile-drawer.open{ right:0; }
+  .mobile-drawer a{ font-size:18px; font-family:'Space Grotesk',sans-serif; color:var(--white); }
+  .drawer-backdrop{ position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:150; opacity:0; pointer-events:none; transition:opacity .3s ease; }
+  .drawer-backdrop.open{ opacity:1; pointer-events:auto; }
+</style>
+</head>
+<body>
+
+<div class="drawer-backdrop" id="backdrop"></div>
+<div class="mobile-drawer" id="drawer">
+  <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+  <a href="#about" data-en="About" data-ar="من نحن">About</a>
+  <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+  <a href="#projects" data-en="Projects" data-ar="مشاريعنا">Projects</a>
+  <a href="#process" data-en="Process" data-ar="آلية العمل">Process</a>
+  <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+  <a class="btn btn-primary" href="tel:+96895418430" style="margin-top:10px;" data-en="Call Us" data-ar="اتصل بنا">Call Us</a>
+</div>
+
+<header id="siteHeader">
+  <div class="wrap nav-row">
+    <a href="#home" class="brand">
+      <div class="brand-mark"><img src="images/logo.png" alt="Creative Engineering &amp; Contracting Co. LLC logo" /></div>
+      <div class="brand-text">
+        <div class="name">Creative Engineering and Contracting Company LLC</div>
+        <div class="sub" data-en="Engineering · Fabrication · Oman" data-ar="هندسة · تصنيع · عُمان">Engineering · Fabrication · Oman</div>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="#about" data-en="About" data-ar="من نحن">About</a>
+      <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+      <a href="#projects" data-en="Projects" data-ar="مشاريعنا">Projects</a>
+      <a href="#process" data-en="Process" data-ar="آلية العمل">Process</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle">EN / عربي</button>
+      <a href="#contact" class="btn btn-primary" style="padding:11px 22px; font-size:13.5px;" data-en="Get a Free Quote" data-ar="اطلب عرض سعر">Get a Free Quote</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div class="hero-badge">
+        <span class="dot">25+</span>
+        <span class="txt" data-en="Years of combined engineering &amp; fabrication experience, delivered with our partner network in Oman" data-ar="سنوات من الخبرة الهندسية المجمعة، تم تقديمها مع شبكة شركائنا في عُمان">Years of combined engineering &amp; fabrication experience, delivered with our partner network in Oman</span>
+      </div>
+      <h1 class="reveal" data-en="Built to carry <em>what's next.</em>" data-ar="مبنيّون لنحمل <em>ما هو قادم.</em>">Built to carry <em>what's next.</em></h1>
+      <p class="lead reveal" data-en="Trusted engineering, structural steel, welding and industrial fabrication solutions for commercial clients across Oman — from initial consultation through to final delivery." data-ar="حلول هندسية موثوقة، وأعمال الحديد الإنشائي، واللحام، والتصنيع الصناعي لعملائنا التجاريين في جميع أنحاء عُمان — من الاستشارة الأولى وحتى التسليم النهائي.">Trusted engineering, structural steel, welding and industrial fabrication solutions for commercial clients across Oman — from initial consultation through to final delivery.</p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary" data-en="Get a Free Quote" data-ar="اطلب عرض سعر مجاني">Get a Free Quote</a>
+        <a href="#contact" class="btn btn-ghost" data-en="Talk to Our Team" data-ar="تحدث مع فريقنا">Talk to Our Team</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><div class="num">2023</div><div class="lbl" data-en="CECC Established" data-ar="تأسست الشركة">CECC Established</div></div>
+        <div class="stat"><div class="num" data-count="25">0</div><div class="lbl" data-en="Years Combined Partner Experience" data-ar="سنوات خبرة الشركاء المجمعة">Years Combined Partner Experience</div></div>
+        <div class="stat"><div class="num">Muscat</div><div class="lbl" data-en="Based &amp; Operating in Oman" data-ar="مقرنا ونعمل في عُمان">Based &amp; Operating in Oman</div></div>
+        <div class="stat"><div class="num">B2B</div><div class="lbl" data-en="Commercial Clients Focus" data-ar="نركز على العملاء التجاريين">Commercial Clients Focus</div></div>
+      </div>
+    </div>
+    <div class="scroll-cue">Scroll<br/>↓</div>
+  </section>
+
+  <!-- ABOUT / SECTION 01 -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <div class="eyebrow" data-en="01 — Company Overview" data-ar="01 — نبذة عن الشركة">01 — Company Overview</div>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);" data-en="Experience that holds its shape." data-ar="خبرة تحافظ على تماسكها.">Experience that holds its shape.</h2>
+        <p class="about-quote" data-en="&quot;Engineering is more than a finished object. It is the care taken in the details, the discipline behind the process, and the trust built between people.&quot;" data-ar="«الهندسة أكثر من مجرد منتج نهائي. إنها العناية بالتفاصيل، والانضباط في العملية، والثقة المبنية بين الأشخاص.»">"Engineering is more than a finished object. It is the care taken in the details, the discipline behind the process, and the trust built between people."</p>
+        <p style="color:var(--fog-200); font-size:15px; font-weight:300; margin-bottom:20px;" data-en="Creative Engineering &amp; Contracting Co. LLC was established in 2023 in Muscat. We work closely with a trusted partner network bringing 25+ years of combined industry experience to every project." data-ar="تأسست شركة الهندسة الإبداعية والمقاولات المحدودة في عام 2023 في مسقط. نعمل بشكل وثيق مع شبكة شركاء موثوقين يمتلكون خبرة مجمعة تفوق 25 عامًا في الصناعة لكل مشروع.">Creative Engineering &amp; Contracting Co. LLC was established in 2023 in Muscat. We work closely with a trusted partner network bringing 25+ years of combined industry experience to every project.</p>
+        <ul class="about-list">
+          <li><span class="check">✓</span> <span data-en="Backed by a partner network with 25+ years of combined experience in Oman" data-ar="مدعومون بشبكة شركاء تمتلك خبرة مجمعة تفوق 25 عامًا في عُمان">Backed by a partner network with 25+ years of combined experience in Oman</span></li>
+          <li><span class="check">✓</span> <span data-en="Commercial focus, shaped around real business needs" data-ar="تركيز تجاري، مصمم حول احتياجات العمل الحقيقية">Commercial focus, shaped around real business needs</span></li>
+          <li><span class="check">✓</span> <span data-en="End-to-end support — from consultation through fabrication and delivery" data-ar="دعم شامل — من الاستشارة إلى التصنيع والتسليم">End-to-end support — from consultation through fabrication and delivery</span></li>
+          <li><span class="check">✓</span> <span data-en="Based in Muscat, serving clients across the Sultanate" data-ar="مقرنا في مسقط، ونخدم العملاء في جميع أنحاء السلطنة">Based in Muscat, serving clients across the Sultanate</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-block" style="margin-top:34px;" data-en="Let's Build With Purpose →" data-ar="لنبنِ بهدف ←">Let's Build With Purpose →</a>
+      </div>
+      <div class="about-media reveal">
+        <img src="images/about-steel-frame.jpg" alt="Structural steel frame fabricated by Creative Engineering, Muscat" />
+        <div class="tag"><div class="n">25+</div><div class="l" data-en="Years Combined Experience" data-ar="سنوات خبرة مجمعة">Years Combined Experience</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / SECTION 02 -->
+  <section class="section-alt" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="02 — What We Do" data-ar="02 — ماذا نقدم">02 — What We Do</div>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);" data-en="Practical expertise, built around you." data-ar="خبرة عملية، مصممة من أجلك.">Practical expertise, built around you.</h2>
+        <p data-en="The right detail makes the difference — five core service lines covering the full lifecycle of a commercial fabrication project." data-ar="التفاصيل الصحيحة هي ما يصنع الفرق — خمسة خطوط خدمة أساسية تغطي دورة حياة مشروع التصنيع التجاري بالكامل.">The right detail makes the difference — five core service lines covering the full lifecycle of a commercial fabrication project.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="idx">01</div>
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l7-7M14 4l6 6-3 3-6-6 3-3zM8 8l8 8"/></svg></div>
+          <h3 data-en="Steel Fabrication" data-ar="تصنيع الحديد">Steel Fabrication</h3>
+          <p data-en="Fabrication work produced with close attention to dimensions, materials and installation requirements." data-ar="أعمال تصنيع يتم إنتاجها بعناية دقيقة بالأبعاد والمواد ومتطلبات التركيب.">Fabrication work produced with close attention to dimensions, materials and installation requirements.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="idx">02</div>
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V9l8-6 8 6v12M9 21V13h6v8"/></svg></div>
+          <h3 data-en="Structural Works" data-ar="الأعمال الإنشائية">Structural Works</h3>
+          <p data-en="Structural solutions for commercial environments, balancing buildability with long-term strength." data-ar="حلول إنشائية للبيئات التجارية، توازن بين سهولة التنفيذ والمتانة طويلة الأمد.">Structural solutions for commercial environments, balancing buildability with long-term strength.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="idx">03</div>
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></div>
+          <h3 data-en="Welding" data-ar="اللحام">Welding</h3>
+          <p data-en="Skilled welding services that create confident, durable connections across every project type." data-ar="خدمات لحام ماهرة تنتج وصلات قوية ودائمة في جميع أنواع المشاريع.">Skilled welding services that create confident, durable connections across every project type.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="idx">04</div>
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09A1.65 1.65 0 0015 4.6a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+          <h3 data-en="Industrial Fabrication Solutions" data-ar="حلول التصنيع الصناعي">Industrial Fabrication Solutions</h3>
+          <p data-en="Flexible, responsive support for industrial fabrication needs across multiple sectors." data-ar="دعم مرن وسريع الاستجابة لاحتياجات التصنيع الصناعي في مختلف القطاعات.">Flexible, responsive support for industrial fabrication needs across multiple sectors.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="idx">05</div>
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h3 data-en="Manpower Supply" data-ar="توريد القوى العاملة">Manpower Supply</h3>
+          <p data-en="Skilled, site-ready manpower supplied to support project timelines and on-site delivery." data-ar="قوى عاملة ماهرة وجاهزة للموقع، لدعم الجداول الزمنية للمشاريع والتسليم في الموقع.">Skilled, site-ready manpower supplied to support project timelines and on-site delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / SECTION 03 -->
+  <section id="philosophy">
+    <div class="wrap">
+      <div class="philosophy reveal">
+        <div class="philosophy-top">
+          <span data-en="Detail" data-ar="التفاصيل">Detail</span><span data-en="Structure" data-ar="الهيكل">Structure</span><span data-en="Execution" data-ar="التنفيذ">Execution</span>
+        </div>
+        <div class="eyebrow" style="margin-bottom:20px;" data-en="03 — Our Philosophy" data-ar="03 — فلسفتنا">03 — Our Philosophy</div>
+        <h2 data-en="Clear work. Solid outcomes. We treat every project as a partnership — understanding the need first, then engineering a solution that's built to last." data-ar="عمل واضح. نتائج متينة. نتعامل مع كل مشروع كشراكة — نفهم الحاجة أولاً، ثم نصمم حلاً هندسيًا مبنيًا ليدوم.">Clear work. Solid outcomes. We treat every project as a partnership — understanding the need first, then engineering a solution that's built to last.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS / SECTION 04 -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="04 — Experience Highlights" data-ar="04 — أبرز الخبرات">04 — Experience Highlights</div>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);" data-en="Trusted, reliable, hands-on." data-ar="موثوقون، معتمد علينا، وملتزمون ميدانيًا.">Trusted, reliable, hands-on.</h2>
+      </div>
+      <div class="stats-grid reveal">
+        <div class="cell"><div class="big" data-count="25">0</div><div class="cap" data-en="Years of Combined Partner Experience" data-ar="سنوات من خبرة الشركاء المجمعة">Years of Combined Partner Experience</div></div>
+        <div class="cell"><div class="big">Muscat</div><div class="cap" data-en="Head Office &amp; Workshop" data-ar="المكتب الرئيسي والورشة">Head Office &amp; Workshop</div></div>
+        <div class="cell"><div class="big" data-en="End-to-End" data-ar="من البداية إلى النهاية">End-to-End</div><div class="cap" data-en="Consultation to Delivery" data-ar="من الاستشارة إلى التسليم">Consultation to Delivery</div></div>
+        <div class="cell"><div class="big">Sun–Thu</div><div class="cap" data-en="09:00 – 17:00 Support" data-ar="الدعم من 09:00 حتى 17:00">09:00 – 17:00 Support</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / SECTION 05 — FULL GALLERY -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="proj-head reveal">
+        <div>
+          <div class="eyebrow" data-en="05 — Completed Projects" data-ar="05 — المشاريع المنجزة">05 — Completed Projects</div>
+          <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);" data-en="The full picture." data-ar="الصورة الكاملة.">The full picture.</h2>
+          <p style="color:var(--steel-400); font-size:16px; font-weight:300; max-width:560px; margin-top:10px;" data-en="45 photos from real jobs across Muscat — structural steel, staircases, shade structures, gates and site fabrication. Filter by category or tap any photo to view it larger." data-ar="45 صورة من أعمال حقيقية في مسقط — حديد إنشائي، سلالم، مظلات، بوابات، وتصنيع في الموقع. صفِّ حسب الفئة أو اضغط على أي صورة لعرضها بشكل أكبر.">45 photos from real jobs across Muscat — structural steel, staircases, shade structures, gates and site fabrication. Filter by category or tap any photo to view it larger.</p>
+        </div>
+      </div>
+      <div class="gal-tabs reveal">
+        <button class="gal-tab active" data-filter="all" data-en="All" data-ar="الكل">All</button>
+        <button class="gal-tab" data-filter="structural-works" data-en="Structural Works" data-ar="الأعمال الإنشائية">Structural Works</button>
+        <button class="gal-tab" data-filter="steel-fabrication" data-en="Steel Fabrication" data-ar="تصنيع الحديد">Steel Fabrication</button>
+        <button class="gal-tab" data-filter="shade-structures" data-en="Shade Structures" data-ar="المظلات">Shade Structures</button>
+        <button class="gal-tab" data-filter="industrial-fabrication" data-en="Industrial Fabrication" data-ar="التصنيع الصناعي">Industrial Fabrication</button>
+        <button class="gal-tab" data-filter="facilities" data-en="Facilities" data-ar="المرافق">Facilities</button>
+        <button class="gal-tab" data-filter="on-site" data-en="On-Site" data-ar="في الموقع">On-Site</button>
+      </div>
+      <div class="gal-grid reveal" id="galGrid">
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/structural-frame-01.jpg" alt="Steel Frame Under Construction — Creative Engineering, Muscat" data-full="images/gallery/structural-frame-01.jpg" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Steel Frame Under Construction</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/structural-frame-02.jpg" alt="Commercial Building Steel Frame — Creative Engineering, Muscat" data-full="images/gallery/structural-frame-02.jpg" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Commercial Building Steel Frame</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/staircase-fabrication-01.jpg" alt="Staircase Frame Fabrication — Creative Engineering, Muscat" data-full="images/gallery/staircase-fabrication-01.jpg" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Staircase Frame Fabrication</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="facilities">
+          <img src="images/gallery/portable-cabin-01.jpg" alt="Portable Site Cabin — Creative Engineering, Muscat" data-full="images/gallery/portable-cabin-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Facilities</span><span class="gtitle">Portable Site Cabin</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/handrail-01.jpg" alt="Stainless Steel Handrail — Creative Engineering, Muscat" data-full="images/gallery/handrail-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Stainless Steel Handrail</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/shade-install-01.jpg" alt="Shade Structure Installation — Creative Engineering, Muscat" data-full="images/gallery/shade-install-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Shade Structure Installation</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/shade-canopy-01.jpg" alt="Compact Shade Canopy — Creative Engineering, Muscat" data-full="images/gallery/shade-canopy-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Compact Shade Canopy</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/structural-frame-03.jpg" alt="Steel Frame Erection at Dusk — Creative Engineering, Muscat" data-full="images/gallery/structural-frame-03.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Steel Frame Erection at Dusk</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/steel-door-01.jpg" alt="Custom Steel Entry Door — Creative Engineering, Muscat" data-full="images/gallery/steel-door-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Custom Steel Entry Door</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/villa-shade-night.jpg" alt="Illuminated Villa Car Shade — Creative Engineering, Muscat" data-full="images/gallery/villa-shade-night.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Illuminated Villa Car Shade</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/ornate-gate-01.jpg" alt="Ornate Wrought-Iron Gate — Creative Engineering, Muscat" data-full="images/gallery/ornate-gate-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Ornate Wrought-Iron Gate</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/steel-sections-01.jpg" alt="Fabricated Steel Sections — Creative Engineering, Muscat" data-full="images/gallery/steel-sections-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Fabricated Steel Sections</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/balcony-railing-01.jpg" alt="Balcony Railing — Creative Engineering, Muscat" data-full="images/gallery/balcony-railing-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Balcony Railing</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/villa-shade-day.jpg" alt="Villa Car Shade &amp; Laser-Cut Screen — Creative Engineering, Muscat" data-full="images/gallery/villa-shade-day.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Villa Car Shade &amp; Laser-Cut Screen</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/staircase-install-01.jpg" alt="Staircase Installation — Creative Engineering, Muscat" data-full="images/gallery/staircase-install-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Staircase Installation</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/glass-balustrade-01.jpg" alt="Glass &amp; Steel Balustrade — Creative Engineering, Muscat" data-full="images/gallery/glass-balustrade-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Glass &amp; Steel Balustrade</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/site-fencing-01.jpg" alt="Site Hoarding &amp; Fencing — Creative Engineering, Muscat" data-full="images/gallery/site-fencing-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Site Hoarding &amp; Fencing</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/mezzanine-rack-01.jpg" alt="Steel Parking &amp; Mezzanine Rack — Creative Engineering, Muscat" data-full="images/gallery/mezzanine-rack-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Steel Parking &amp; Mezzanine Rack</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/staircase-detail-01.jpg" alt="Staircase Railing Detail — Creative Engineering, Muscat" data-full="images/gallery/staircase-detail-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Staircase Railing Detail</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/floating-staircase-01.jpg" alt="Floating Steel Staircase — Creative Engineering, Muscat" data-full="images/gallery/floating-staircase-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Floating Steel Staircase</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/rack-install-01.jpg" alt="Steel Rack Installation — Creative Engineering, Muscat" data-full="images/gallery/rack-install-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Steel Rack Installation</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/beam-yard-01.jpg" alt="Precast Beam &amp; Girder Yard — Creative Engineering, Muscat" data-full="images/gallery/beam-yard-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Precast Beam &amp; Girder Yard</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="facilities">
+          <img src="images/gallery/portable-cabin-02.jpg" alt="Portable Site Cabin — Creative Engineering, Muscat" data-full="images/gallery/portable-cabin-02.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Facilities</span><span class="gtitle">Portable Site Cabin</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/staircase-finishing-01.jpg" alt="Structural Staircase — Site Finishing — Creative Engineering, Muscat" data-full="images/gallery/staircase-finishing-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Structural Staircase — Site Finishing</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/structural-frame-04.jpg" alt="Structural Steel Frame — Creative Engineering, Muscat" data-full="images/gallery/structural-frame-04.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Structural Steel Frame</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/steel-racking-01.jpg" alt="Steel Shelving &amp; Racking — Creative Engineering, Muscat" data-full="images/gallery/steel-racking-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Steel Shelving &amp; Racking</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/villa-shade-02.jpg" alt="Villa Car Shade — Creative Engineering, Muscat" data-full="images/gallery/villa-shade-02.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Villa Car Shade</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/roof-vents-01.jpg" alt="Roof Ventilation Turbines — Creative Engineering, Muscat" data-full="images/gallery/roof-vents-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Roof Ventilation Turbines</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="facilities">
+          <img src="images/gallery/portable-cabin-03.jpg" alt="Portable Cabin Unit — Creative Engineering, Muscat" data-full="images/gallery/portable-cabin-03.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Facilities</span><span class="gtitle">Portable Cabin Unit</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/carpark-shade-01.jpg" alt="Car Park Shade Structure — Creative Engineering, Muscat" data-full="images/gallery/carpark-shade-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Car Park Shade Structure</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/decorative-gate-01.jpg" alt="Decorative Steel Gate — Creative Engineering, Muscat" data-full="images/gallery/decorative-gate-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Decorative Steel Gate</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/steel-door-02.jpg" alt="Custom Steel Door — Creative Engineering, Muscat" data-full="images/gallery/steel-door-02.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Custom Steel Door</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/shade-structure-01.jpg" alt="Shade Structure — Creative Engineering, Muscat" data-full="images/gallery/shade-structure-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Shade Structure</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/steel-framing-01.jpg" alt="Steel Poles &amp; Framing — Creative Engineering, Muscat" data-full="images/gallery/steel-framing-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Steel Poles &amp; Framing</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/rooftop-frame-01.jpg" alt="Structural Steel — Rooftop Frame — Creative Engineering, Muscat" data-full="images/gallery/rooftop-frame-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Structural Steel — Rooftop Frame</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/decorative-gate-02.jpg" alt="Decorative Laser-Cut Gate — Creative Engineering, Muscat" data-full="images/gallery/decorative-gate-02.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Decorative Laser-Cut Gate</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/shade-frame-assembly-01.jpg" alt="Shade Structure Frame Assembly — Creative Engineering, Muscat" data-full="images/gallery/shade-frame-assembly-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Shade Structure Frame Assembly</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/structural-development-01.jpg" alt="Structural Steel Development — Creative Engineering, Muscat" data-full="images/gallery/structural-development-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Structural Steel Development</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/structure-interior-01.jpg" alt="Steel Structure Interior — Creative Engineering, Muscat" data-full="images/gallery/structure-interior-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Steel Structure Interior</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/panel-delivery-01.jpg" alt="Insulated Panel Delivery — Creative Engineering, Muscat" data-full="images/gallery/panel-delivery-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Insulated Panel Delivery</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="steel-fabrication">
+          <img src="images/gallery/workshop-setup-01.jpg" alt="Site Workshop Setup — Creative Engineering, Muscat" data-full="images/gallery/workshop-setup-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Steel Fabrication</span><span class="gtitle">Site Workshop Setup</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="structural-works">
+          <img src="images/gallery/structural-frame-05.jpg" alt="Structural Steel Frame — Creative Engineering, Muscat" data-full="images/gallery/structural-frame-05.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Structural Works</span><span class="gtitle">Structural Steel Frame</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="industrial-fabrication">
+          <img src="images/gallery/security-fencing-01.jpg" alt="Security Fencing — Razor Wire — Creative Engineering, Muscat" data-full="images/gallery/security-fencing-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Industrial Fabrication</span><span class="gtitle">Security Fencing — Razor Wire</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="on-site">
+          <img src="images/gallery/onsite-inspection-01.jpg" alt="On-Site in Muscat — Creative Engineering, Muscat" data-full="images/gallery/onsite-inspection-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">On-Site</span><span class="gtitle">On-Site in Muscat</span></figcaption>
+        </figure>
+        <figure class="gal-item" data-cat="shade-structures">
+          <img src="images/gallery/shade-install-team-01.jpg" alt="Shade Structure Installation Team — Creative Engineering, Muscat" data-full="images/gallery/shade-install-team-01.jpg" loading="lazy" />
+          <figcaption><span class="gcat">Shade Structures</span><span class="gtitle">Shade Structure Installation Team</span></figcaption>
+        </figure>
+      </div>
+      <p class="form-note" style="margin-top:24px;" id="galCount" data-en="Showing all 45 photos from completed projects across Oman." data-ar="عرض جميع الصور البالغ عددها 45 من المشاريع المنجزة في عُمان.">Showing all 45 photos from completed projects across Oman.</p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img id="lbImage" src="" alt="" />
+    <div class="lb-caption" id="lbCaption"></div>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <!-- PROCESS / SECTION 07 -->
+  <section class="section-alt" id="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="06 — How We Work" data-ar="06 — طريقة عملنا">06 — How We Work</div>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);" data-en="A simple, transparent process." data-ar="عملية بسيطة وشفافة.">A simple, transparent process.</h2>
+      </div>
+      <div class="process-grid reveal">
+        <div class="process-step">
+          <div class="num">01</div>
+          <h3 data-en="Understanding" data-ar="الفهم">Understanding</h3>
+          <p data-en="We start every project by understanding your requirements, site conditions and timeline in detail." data-ar="نبدأ كل مشروع بفهم متطلباتكم وظروف الموقع والجدول الزمني بالتفصيل.">We start every project by understanding your requirements, site conditions and timeline in detail.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">02</div>
+          <h3 data-en="Shaping" data-ar="التصميم">Shaping</h3>
+          <p data-en="We shape a practical engineering solution — tailored to your project, budget and specification." data-ar="نصمم حلاً هندسيًا عمليًا — مصممًا خصيصًا لمشروعكم وميزانيتكم ومواصفاتكم.">We shape a practical engineering solution — tailored to your project, budget and specification.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">03</div>
+          <h3 data-en="Delivering" data-ar="التسليم">Delivering</h3>
+          <p data-en="We deliver with precision — on time, to spec, with clear communication throughout." data-ar="نسلّم بدقة — في الوقت المحدد، وفق المواصفات، مع تواصل واضح طوال الوقت.">We deliver with precision — on time, to spec, with clear communication throughout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / CLIENTS -->
+  <section class="trust-strip">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-left:auto; margin-right:auto;">
+        <div class="eyebrow" style="justify-content:center;" data-en="Trusted By" data-ar="موثوق من قبل">Trusted By</div>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);" data-en="27+ commercial clients served through our partner network across Oman." data-ar="أكثر من 27 عميلًا تجاريًا تم خدمتهم من خلال شبكة شركائنا في عُمان.">27+ commercial clients served through our partner network across Oman.</h2>
+        <p style="color:var(--steel-400); font-size:15px; margin-top:10px;" data-en="Projects delivered in partnership, drawing on 25+ years of combined industry experience." data-ar="مشاريع تم تنفيذها بالشراكة، بالاعتماد على خبرة مجمعة تفوق 25 عامًا في الصناعة.">Projects delivered in partnership, drawing on 25+ years of combined industry experience.</p>
+      </div>
+      <div class="client-row reveal">
+        <div class="client-slot">Al Ansari</div>
+        <div class="client-slot">Al Nada</div>
+        <div class="client-slot">Oman Cables Industry</div>
+        <div class="client-slot">Oman Port</div>
+        <div class="client-slot">Zawawi Trading Company LLC</div>
+        <div class="client-slot">Technical Trading</div>
+        <div class="client-slot">Personal Real Estate</div>
+        <div class="client-slot">Muscat Contract and Cleaning Company LLC</div>
+        <div class="client-slot">Ramnik Lal</div>
+        <div class="client-slot">Abu Matar</div>
+        <div class="client-slot">Super Plastic</div>
+        <div class="client-slot">Dharam Singh</div>
+        <div class="client-slot">Al Minara</div>
+        <div class="client-slot">Sadolin</div>
+        <div class="client-slot">Genetco</div>
+        <div class="client-slot">Al Maya</div>
+        <div class="client-slot">Muscat Engineering Electric</div>
+        <div class="client-slot">Amiantit Oman</div>
+        <div class="client-slot">MHD</div>
+        <div class="client-slot">M.K Trading</div>
+        <div class="client-slot">Reem Batteries</div>
+        <div class="client-slot">Al Khalili</div>
+        <div class="client-slot">BEC – Bahwan Engineering Company</div>
+        <div class="client-slot">Oman Oasis Water</div>
+        <div class="client-slot">Bol Time</div>
+        <div class="client-slot">Mustafa Sultan</div>
+        <div class="client-slot">Oman Chips</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="final-cta reveal">
+        <div>
+          <h2 data-en="Have a structure in mind?" data-ar="هل لديك مشروع في ذهنك؟">Have a structure in mind?</h2>
+          <p data-en="Let's build with purpose. Reach out and our team will get back to you within one business day." data-ar="لنبنِ بهدف. تواصل معنا وسيقوم فريقنا بالرد عليك خلال يوم عمل واحد.">Let's build with purpose. Reach out and our team will get back to you within one business day.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</a>
+          <a href="tel:+96895418430" class="btn btn-ghost" data-en="Call +968 9541 8430" data-ar="اتصل بنا +968 9541 8430">Call +968 9541 8430</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</div>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);" data-en="Let's talk about your project." data-ar="لنتحدث عن مشروعك.">Let's talk about your project.</h2>
+        <p data-en="Reach us directly, or send a message using the form and we'll respond during business hours." data-ar="تواصل معنا مباشرة، أو أرسل رسالة عبر النموذج وسنقوم بالرد خلال ساعات العمل.">Reach us directly, or send a message using the form and we'll respond during business hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-card reveal">
+          <div class="row">
+            <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="lbl" data-en="Phone" data-ar="الهاتف">Phone</div><div class="val">+968 9541 8430</div></div>
+          </div>
+          <div class="row">
+            <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-12 7L2 6"/><path d="M2 6h20v12H2z"/></svg></div>
+            <div><div class="lbl" data-en="Email" data-ar="البريد الإلكتروني">Email</div><div class="val">info@creativengg.com</div></div>
+          </div>
+          <div class="row">
+            <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="lbl" data-en="Address" data-ar="العنوان">Address</div><div class="val" data-en="P.O. Box 211, Postal Code 122, Muscat, Sultanate of Oman" data-ar="ص.ب 211، الرمز البريدي 122، مسقط، سلطنة عُمان">P.O. Box 211, Postal Code 122, Muscat, Sultanate of Oman</div></div>
+          </div>
+          <div class="row">
+            <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><div class="lbl" data-en="Working Hours" data-ar="ساعات العمل">Working Hours</div><div class="val" data-en="Sun – Thu · 09:00 – 17:00" data-ar="الأحد – الخميس · 09:00 – 17:00">Sun – Thu · 09:00 – 17:00</div></div>
+          </div>
+          <div class="row">
+            <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v-1M16 4v-1"/></svg></div>
+            <div><div class="lbl" data-en="Company / C.R. No." data-ar="الشركة / رقم السجل التجاري">Company / C.R. No.</div><div class="val">Creative Engineering &amp; Contracting Co. LLC — C.R. No. 1498561</div></div>
+          </div>
+        </div>
+        <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('.form-success').style.display='block'; this.reset();">
+          <div class="two-col">
+            <div><label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label><input type="text" placeholder="Your name" required /></div>
+            <div><label data-en="Phone" data-ar="الهاتف">Phone</label><input type="tel" placeholder="+968 ..." required /></div>
+          </div>
+          <div class="two-col">
+            <div><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><input type="email" placeholder="you@company.com" required /></div>
+            <div><label data-en="Service Needed" data-ar="الخدمة المطلوبة">Service Needed</label>
+              <select>
+                <option data-en="Steel Fabrication" data-ar="تصنيع الحديد">Steel Fabrication</option>
+                <option data-en="Structural Works" data-ar="الأعمال الإنشائية">Structural Works</option>
+                <option data-en="Welding" data-ar="اللحام">Welding</option>
+                <option data-en="Industrial Fabrication Solutions" data-ar="حلول التصنيع الصناعي">Industrial Fabrication Solutions</option>
+                <option data-en="Manpower Supply" data-ar="توريد القوى العاملة">Manpower Supply</option>
+                <option data-en="Other / Not Sure" data-ar="أخرى / غير متأكد">Other / Not Sure</option>
+              </select>
+            </div>
+          </div>
+          <div><label data-en="Project Details" data-ar="تفاصيل المشروع">Project Details</label><textarea placeholder="Tell us a bit about your project..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="justify-self:start;" data-en="Send Message →" data-ar="إرسال الرسالة ←">Send Message →</button>
+          <p class="form-note form-success" style="display:none; color:var(--amber-400);">Thanks — this is a front-end demo form. Connect it to email/CRM before going live.</p>
+          <p class="form-note">This form is not yet wired to a backend — connect it to an email service (e.g. Formspree) or your CRM before launch.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-mark"><img src="images/logo.png" alt="Creative Engineering &amp; Contracting Co. LLC logo" /></div>
+          <div class="brand-text">
+            <div class="name">Creative Engineering and Contracting Company LLC</div>
+            <div class="sub" data-en="Engineering · Fabrication · Oman" data-ar="هندسة · تصنيع · عُمان">Engineering · Fabrication · Oman</div>
+          </div>
+        </div>
+        <p data-en="Trusted engineering, structural steel, welding and industrial fabrication solutions for commercial clients across Oman." data-ar="حلول هندسية موثوقة، وأعمال الحديد الإنشائي، واللحام، والتصنيع الصناعي لعملائنا التجاريين في جميع أنحاء عُمان.">Trusted engineering, structural steel, welding and industrial fabrication solutions for commercial clients across Oman.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Navigate" data-ar="التنقل">Navigate</h4>
+        <ul>
+          <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
+          <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+          <li><a href="#projects" data-en="Projects" data-ar="مشاريعنا">Projects</a></li>
+          <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Services" data-ar="خدماتنا">Services</h4>
+        <ul>
+          <li><a href="#services" data-en="Steel Fabrication" data-ar="تصنيع الحديد">Steel Fabrication</a></li>
+          <li><a href="#services" data-en="Structural Works" data-ar="الأعمال الإنشائية">Structural Works</a></li>
+          <li><a href="#services" data-en="Welding" data-ar="اللحام">Welding</a></li>
+          <li><a href="#services" data-en="Industrial Solutions" data-ar="الحلول الصناعية">Industrial Solutions</a></li>
+          <li><a href="#services" data-en="Manpower Supply" data-ar="توريد القوى العاملة">Manpower Supply</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Contact" data-ar="تواصل معنا">Contact</h4>
+        <ul>
+          <li><a href="tel:+96895418430">+968 9541 8430</a></li>
+          <li><a href="mailto:info@creativengg.com">info@creativengg.com</a></li>
+          <li><span style="color:var(--steel-400); font-size:14.5px;" data-en="P.O. Box 211, Postal Code 122<br/>Muscat, Sultanate of Oman" data-ar="ص.ب 211، الرمز البريدي 122<br/>مسقط، سلطنة عُمان">P.O. Box 211, Postal Code 122<br/>Muscat, Sultanate of Oman</span></li>
+          <li><span style="color:var(--steel-400); font-size:14.5px;" data-en="Sun–Thu · 09:00–17:00" data-ar="الأحد–الخميس · 09:00–17:00">Sun–Thu · 09:00–17:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div data-en="© <span id=&quot;year&quot;></span> Creative Engineering and Contracting Company LLC. All rights reserved. · C.R. No. 1498561" data-ar="© <span id=&quot;year2&quot;></span> شركة الهندسة الإبداعية والمقاولات المحدودة. جميع الحقوق محفوظة. · رقم السجل التجاري 1498561">© <span id="year"></span> Creative Engineering and Contracting Company LLC. All rights reserved. · C.R. No. 1498561</div>
+      <div><a href="#" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky header
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile drawer
+  const menuToggle = document.getElementById('menuToggle');
+  const drawer = document.getElementById('drawer');
+  const backdrop = document.getElementById('backdrop');
+  function toggleDrawer(open){
+    drawer.classList.toggle('open', open);
+    backdrop.classList.toggle('open', open);
+  }
+  menuToggle.addEventListener('click', () => toggleDrawer(!drawer.classList.contains('open')));
+  backdrop.addEventListener('click', () => toggleDrawer(false));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
+
+  // Lang toggle — switches all data-en/data-ar elements + document direction
+  const langToggle = document.getElementById('langToggle');
+  const translatable = document.querySelectorAll('[data-en][data-ar]');
+
+  function applyLang(lang){
+    const html = document.documentElement;
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    translatable.forEach(el => {
+      const content = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+      el.innerHTML = content;
+    });
+    langToggle.textContent = lang === 'ar' ? 'العربية / EN' : 'EN / عربي';
+    const yearEl = document.getElementById('year') || document.getElementById('year2');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    window.__siteLang = lang;
+  }
+
+  langToggle.addEventListener('click', () => {
+    const current = window.__siteLang || 'en';
+    applyLang(current === 'en' ? 'ar' : 'en');
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Animated counters
+  const counters = document.querySelectorAll('[data-count]');
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        let cur = 0;
+        const step = Math.max(1, Math.round(target / 40));
+        const t = setInterval(() => {
+          cur += step;
+          if (cur >= target){ cur = target; clearInterval(t); }
+          el.textContent = cur + (target === 25 ? '+' : '');
+        }, 30);
+        counterIO.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterIO.observe(c));
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Gallery filtering
+  const galGrid = document.getElementById('galGrid');
+  const galItems = galGrid ? Array.from(galGrid.querySelectorAll('.gal-item')) : [];
+  const galTabs = document.querySelectorAll('.gal-tab');
+  const galCount = document.getElementById('galCount');
+  let currentFilter = 'all';
+
+  function applyFilter(filter){
+    currentFilter = filter;
+    let shown = 0;
+    galItems.forEach(item => {
+      const match = filter === 'all' || item.dataset.cat === filter;
+      item.classList.toggle('hide', !match);
+      if (match) shown++;
+    });
+    if (galCount){
+      galCount.textContent = filter === 'all'
+        ? `Showing all ${shown} photos from completed projects across Oman.`
+        : `Showing ${shown} photo${shown === 1 ? '' : 's'} in ${filter.replace(/-/g,' ')}.`;
+    }
+  }
+  galTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      galTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      applyFilter(tab.dataset.filter);
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lbImage = document.getElementById('lbImage');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  let lbIndex = 0;
+
+  function visibleItems(){
+    return galItems.filter(item => !item.classList.contains('hide'));
+  }
+  function openLightbox(item){
+    const list = visibleItems();
+    lbIndex = list.indexOf(item);
+    showLightbox();
+  }
+  function showLightbox(){
+    const list = visibleItems();
+    if (!list.length) return;
+    if (lbIndex < 0) lbIndex = list.length - 1;
+    if (lbIndex >= list.length) lbIndex = 0;
+    const item = list[lbIndex];
+    const img = item.querySelector('img');
+    const title = item.querySelector('.gtitle')?.textContent || '';
+    const cat = item.querySelector('.gcat')?.textContent || '';
+    lbImage.src = img.dataset.full || img.src;
+    lbImage.alt = img.alt;
+    lbCaption.textContent = cat ? `${cat} — ${title}` : title;
+    lightbox.classList.add('open');
+  }
+  galItems.forEach(item => item.addEventListener('click', () => openLightbox(item)));
+  lbClose.addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+  lbPrev.addEventListener('click', () => { lbIndex--; showLightbox(); });
+  lbNext.addEventListener('click', () => { lbIndex++; showLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') lightbox.classList.remove('open');
+    if (e.key === 'ArrowLeft'){ lbIndex--; showLightbox(); }
+    if (e.key === 'ArrowRight'){ lbIndex++; showLightbox(); }
+  });
+</script>
+
+</body>
+</html>
